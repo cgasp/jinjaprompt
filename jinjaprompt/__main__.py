@@ -12,10 +12,10 @@ from jinja2.meta import find_undeclared_variables
 
 def arg_parse():
     text_description="""
-Description : 
-jinja-prompt script which allow to generate jinja2 template on-the-fly 
+jinjaprompt script allow to generate straightforwardly jinja2 template. 
+Prompt the user for unknown variable
 
-Feature (WIP):
+Feature:
 - Parse a jinja2 template & extract variables
 - Prompt user for founded variable to enter data  
 - If found a yaml or json file with same filename, propose variable as default
@@ -39,7 +39,6 @@ Feature (WIP):
     parser.add_argument('-v', dest='logging', 
                         action='store_true', 
                         help='debug log')
-
 
     return parser.parse_args()
 
@@ -159,7 +158,6 @@ def main():
         with open(filename, "w") as f:
             f.write(rendered)
         
-
 
 if __name__ == '__main__':
     main()
